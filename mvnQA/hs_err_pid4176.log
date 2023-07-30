@@ -1,0 +1,212 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 524288 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:46), pid=4176, tid=2140
+#
+# JRE version:  (11.0.20+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.20+8-LTS, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: C:\Users\1\AppData\Local\Temp\surefire13920944243015320475\surefirebooter14122497678523299701.jar C:\Users\1\AppData\Local\Temp\surefire13920944243015320475 2023-07-29T15-11-24_319-jvmRun1 surefire970785423850187766tmp surefire_07109933041685130175tmp
+
+Host: Intel(R) Pentium(R) CPU        P6200  @ 2.13GHz, 2 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3155)
+Time: Sat Jul 29 15:11:25 2023 RTZ 2 (s 10 , 64 bit Build 19041 (10.0.19041.3155) elapsed time: 0.024938 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000220a3d8c000):  JavaThread "Unknown thread" [_thread_in_vm, id=2140, stack(0x000000420ef00000,0x000000420f000000)]
+
+Stack: [0x000000420ef00000,0x000000420f000000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x62418a]
+V  [jvm.dll+0x7b1d69]
+V  [jvm.dll+0x7b3458]
+V  [jvm.dll+0x7b3b33]
+V  [jvm.dll+0x250148]
+V  [jvm.dll+0xb9614]
+V  [jvm.dll+0x706702]
+V  [jvm.dll+0x706697]
+V  [jvm.dll+0x70680a]
+V  [jvm.dll+0x78afb2]
+V  [jvm.dll+0x78d56e]
+V  [jvm.dll+0x362a49]
+V  [jvm.dll+0x76e9b0]
+V  [jvm.dll+0x3d179f]
+V  [jvm.dll+0x3d3b31]
+C  [jli.dll+0x5227]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526b1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000220a3cd8080, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000220a5e2c000 GCTaskThread "GC Thread#0" [stack: 0x000000420f000000,0x000000420f100000] [id=6284]
+  0x00000220a5e47000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000420f100000,0x000000420f200000] [id=5280]
+  0x00000220a5e48000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000420f200000,0x000000420f300000] [id=5516]
+  0x00000220c16c1800 ConcurrentGCThread "G1 Refine#0" [stack: 0x000000420f300000,0x000000420f400000] [id=2900]
+  0x00000220c16c2000 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x000000420f400000,0x000000420f500000] [id=7792]
+
+=>0x00000220a3d8c000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=2140, stack(0x000000420ef00000,0x000000420f000000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x00000000c5200000, size: 942 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.014 Loaded shared library C:\Users\1\.jdks\corretto-11.0.20\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff6d8850000 - 0x00007ff6d885d000 	C:\Users\1\.jdks\corretto-11.0.20\bin\java.exe
+0x00007ff8f0550000 - 0x00007ff8f0748000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff8ef990000 - 0x00007ff8efa4f000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8ee240000 - 0x00007ff8ee536000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8eb420000 - 0x00007ff8eb4b1000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ff8edc30000 - 0x00007ff8edd30000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff8e7e90000 - 0x00007ff8e7ea7000 	C:\Users\1\.jdks\corretto-11.0.20\bin\jli.dll
+0x00007ff8efdb0000 - 0x00007ff8eff4d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8ee170000 - 0x00007ff8ee192000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff8f0270000 - 0x00007ff8f029c000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8eddc0000 - 0x00007ff8eded5000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8ee1a0000 - 0x00007ff8ee23d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff8e78d0000 - 0x00007ff8e78e9000 	C:\Users\1\.jdks\corretto-11.0.20\bin\VCRUNTIME140.dll
+0x00007ff8dd1d0000 - 0x00007ff8dd46a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff8ef780000 - 0x00007ff8ef81e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff8effb0000 - 0x00007ff8effe0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff8ed580000 - 0x00007ff8ed5b0000 	C:\WINDOWS\system32\DriverStore\FileRepository\nvacwu.inf_amd64_bdd6ea477d4e2fba\nvinitx.dll
+0x00007ff8effe0000 - 0x00007ff8f008f000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8efb00000 - 0x00007ff8efb9c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8f0300000 - 0x00007ff8f0426000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8ed570000 - 0x00007ff8ed57a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff8ee5b0000 - 0x00007ff8eecf4000 	C:\WINDOWS\System32\Shell32.dll
+0x00007ff8ebca0000 - 0x00007ff8ec434000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ff8ef420000 - 0x00007ff8ef774000 	C:\WINDOWS\System32\combase.dll
+0x00007ff8ed600000 - 0x00007ff8ed62e000 	C:\WINDOWS\SYSTEM32\Wldp.dll
+0x00007ff8ef370000 - 0x00007ff8ef41d000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ff8ef310000 - 0x00007ff8ef365000 	C:\WINDOWS\System32\shlwapi.dll
+0x0000000073220000 - 0x0000000073226000 	C:\Program Files\NVIDIA Corporation\CoProcManager\_etoured.dll
+0x00007ff8e8f30000 - 0x00007ff8e8f6b000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x00007ff8eee30000 - 0x00007ff8ef29e000 	C:\WINDOWS\System32\SETUPAPI.dll
+0x00007ff8edf10000 - 0x00007ff8edf5e000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ff8edee0000 - 0x00007ff8edf07000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ff8e89d0000 - 0x00007ff8e89f4000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x00007ff8e3c00000 - 0x00007ff8e3c9b000 	C:\Users\1\.jdks\corretto-11.0.20\bin\msvcp140.dll
+0x00007ff8cf8c0000 - 0x00007ff8d044b000 	C:\Users\1\.jdks\corretto-11.0.20\bin\server\jvm.dll
+0x00007ff8f0260000 - 0x00007ff8f0268000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff8eb310000 - 0x00007ff8eb319000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff8ef2a0000 - 0x00007ff8ef30b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff8dd820000 - 0x00007ff8dd847000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8ebaa0000 - 0x00007ff8ebab2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff8e7f20000 - 0x00007ff8e7f30000 	C:\Users\1\.jdks\corretto-11.0.20\bin\verify.dll
+0x00007ff8de0f0000 - 0x00007ff8de2d4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff8de050000 - 0x00007ff8de084000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff8edd30000 - 0x00007ff8eddb2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff8e6d00000 - 0x00007ff8e6d28000 	C:\Users\1\.jdks\corretto-11.0.20\bin\java.dll
+0x00007ff8e7ee0000 - 0x00007ff8e7eea000 	C:\Users\1\.jdks\corretto-11.0.20\bin\jimage.dll
+0x00007ff8e7850000 - 0x00007ff8e7868000 	C:\Users\1\.jdks\corretto-11.0.20\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\1\.jdks\corretto-11.0.20\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\WINDOWS\system32\DriverStore\FileRepository\nvacwu.inf_amd64_bdd6ea477d4e2fba;C:\Program Files\NVIDIA Corporation\CoProcManager;C:\Users\1\.jdks\corretto-11.0.20\bin\server
+
+VM Arguments:
+java_command: C:\Users\1\AppData\Local\Temp\surefire13920944243015320475\surefirebooter14122497678523299701.jar C:\Users\1\AppData\Local\Temp\surefire13920944243015320475 2023-07-29T15-11-24_319-jvmRun1 surefire970785423850187766tmp surefire_07109933041685130175tmp
+java_class_path (initial): C:\Users\1\AppData\Local\Temp\surefire13920944243015320475\surefirebooter14122497678523299701.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 62914560                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 987758592                                 {product} {ergonomic}
+   size_t MaxNewSize                               = 592445440                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5825164                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916538                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122916538                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Eclipse Adoptium\jdk-11.0.19.7-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\1\AppData\Local\Microsoft\WindowsApps;;C:\Users\1\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=1
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 37 Stepping 5, GenuineIntel
+TMP=C:\Users\1\AppData\Local\Temp
+TEMP=C:\Users\1\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.3155)
+OS uptime: 0 days 3:04 hours
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 37 stepping 5 microcode 0x7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, popcnt, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 3766M (391M free)
+TotalPageFile size 5814M (AvailPageFile size 4M)
+current process WorkingSet (physical memory assigned to process): 16M, peak: 16M
+current process commit charge ("private bytes"): 112M, peak: 112M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.20+8-LTS) for windows-amd64 JRE (11.0.20+8-LTS), built on Jul 11 2023 19:58:45 by "Administrator" with MS VC++ 15.9 (VS2017)
+
+END.
